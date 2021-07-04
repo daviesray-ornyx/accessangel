@@ -1,0 +1,167 @@
+#accessabar .ab-modal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10rem 1fr;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    z-index: 2140000015;
+}
+
+@media (--for-desktop-up) {
+    #accessabar .ab-modal {
+        grid-template-columns: 5em 1fr 1020px 1fr 5em;
+        grid-template-rows: 5em 10rem 1fr 5em;
+    }
+}
+
+#accessabar .ab-modal-header {
+    background: var(--near-white);
+    display: flex;
+    justify-content: space-between;
+    grid-area: 1 / 1 / 2 / 4;
+    padding: 1rem 0;
+}
+
+@media (--for-tablet-landscape-up) {
+    #accessabar .ab-modal-header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (--for-desktop-up) {
+    #accessabar .ab-modal-header {
+        grid-area: 2 / 2 / 3 / 5;
+        border-top: 4px solid var(--near-black);
+        border-left: 4px solid var(--near-black);
+        border-right: 4px solid var(--near-black);
+    }
+}
+
+#accessabar .ab-modal-header-title {
+    font-size: 1.8em;
+    display: flex;
+    align-self: center;
+    margin-left: 2em;
+}
+
+@media (--for-tablet-landscape-up) {
+    #accessabar .ab-modal-header-title {
+        margin-left: 0;
+        justify-self: center;
+    }
+}
+
+#accessabar .ab-modal-close-button {
+    display: flex;
+    margin-right: 2em;
+    padding: 1em;
+    background: var(--dark-grey);
+    color: var(--font-colour);
+    line-height: 0;
+    align-self: center;
+
+    &:hover, &:focus {
+        background: var(--lighter-red);
+        cursor: pointer;
+        outline: 2px solid var(--blue-focus);
+    }
+}
+
+@media (--for-tablet-landscape-up) {
+    #accessabar .ab-modal-close-button {
+        justify-self: flex-end;
+    }
+}
+
+#accessabar .ab-modal-logo {
+    display: none;
+}
+
+@media (--for-tablet-landscape-up) {
+    #accessabar .ab-modal-logo {
+        display: flex;
+    }
+}
+
+#accessabar .ab-modal-section-left {
+    display: none;
+}
+
+#accessabar .ab-modal-section-right {
+    display: none;
+}
+
+@media (--for-desktop-up) {
+    #accessabar .ab-modal-section-left {
+        display: flex;
+        grid-area: 3 / 2;
+        background: var(--near-white);
+        border-bottom: 4px solid var(--near-black);
+        border-left: 4px solid var(--near-black);
+    }
+
+    #accessabar .ab-modal-section-right {
+        display: flex;
+        grid-area: 3 / 4;
+        background: var(--near-white);
+        border-bottom: 4px solid var(--near-black);
+        border-right: 4px solid var(--near-black);
+    }
+}
+
+#accessabar .ab-modal-section {
+    background: var(--near-white);
+    display: flex;
+    grid-area: 2 / 1 / 3 / 4;
+    padding: 2rem;
+    flex-direction: column;
+    overflow-y: auto;
+
+    /* Fix padding not applied at end of scrollable section */
+    &::after {
+        content: '';
+        padding: 1rem;
+    }
+}
+
+@media (--for-desktop-up) {
+    #accessabar .ab-modal-section {
+        grid-area: 3 / 3;
+        border-bottom: 4px solid var(--near-black);
+    }
+}
+
+#accessabar .ab-modal-section-group {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#accessabar .ab-modal-section-group-row {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#accessabar .ab-modal-section-title {
+    font-family: var(--header-font);
+    font-size: 1.4em;
+    margin: 1em 0 0;
+}
+
+#accessabar .ab-modal-title {
+    font-size: 1.15em;
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+
+#accessabar .ab-modal-placeholder {
+    margin: 1em 0;
+}
+
+

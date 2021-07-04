@@ -1,0 +1,46 @@
+// Ensure 'editName' is the same as the CSS property style
+// i.e. Font Size => font-size
+
+{
+    fontSizing: {
+        attrNames: {
+            orig: 'ace-orig-font-size',
+            origComputed: 'ace-orig-computed-font-size',
+        },
+        editName: 'font-size',
+    },
+
+    fontFamily: {
+        attrNames: {
+            orig: 'ace-orig-font-family',
+        },
+        editName: 'font-family',
+    },
+
+    fontColour: {
+        attrNames: {
+            orig: 'ace-orig-font-colour',
+        },
+        editName: 'color',
+    },
+
+    fontLineSpacing: {
+        attrNames: {
+            orig: 'ace-orig-font-line-height',
+            origComputed: 'ace-orig-computed-font-line-height',
+        },
+        editName: 'line-height',
+    },
+
+    fontLetterSpacing: {
+        attrNames: {
+            orig: 'ace-orig-font-letter-spacing',
+            origComputed: 'ace-orig-computed-font-letter-spacing',
+        },
+        editName: 'letter-spacing',
+    },
+
+    pageTranslation: {
+        editName: 'page-translation',
+    },
+}

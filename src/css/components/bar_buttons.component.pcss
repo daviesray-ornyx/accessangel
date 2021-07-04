@@ -1,0 +1,29 @@
+#accessabar .ab-bar-button {
+    margin: 0.15em;
+    background: var(--dark-grey);
+    color: var(--font-colour);
+    padding: 0.75em;
+    display: inline-flex;
+
+    &:hover, &:focus {
+        background: var(--lighter-grey);
+        cursor: pointer;
+        outline: 2px solid var(--blue-focus);
+    }
+
+    &.ab-close {
+        background: var(--dark-red);
+
+        &:hover, &:focus {
+            background: var(--lighter-red);
+        }
+    }
+
+    &.ab-warning {
+        background: var(--dark-orange);
+
+        &:hover, &:focus {
+            background: var(--lighter-orange);
+        }
+    }
+}

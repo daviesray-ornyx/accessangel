@@ -1,0 +1,83 @@
+#accessabar .ab-feedback-menu {
+    background: var(--near-white);
+    border: 4px solid var(--border-grey);
+    z-index: 2140000010;
+    box-shadow: 0 2px 2px var(--shadow-grey);
+    text-align:center;
+
+    .ab-feedback-prompt-text{
+        display:block;
+        margin-top: 2em;
+        margin-left: 2em;
+        margin-right:2em;
+        text-align: center;
+    }
+
+    .ab-feedback-actions-container{
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em;
+        margin:1em;
+        display: flex;
+
+        .ab-feedback-action-thumbs-up{
+            margin: 0.5em;
+            padding: 0.5em;
+            background: var(--active-green);
+
+            &:hover, &:focus {
+                /* background: var(--lighter-grey); */
+                cursor: pointer;
+                outline: 2px solid var(--blue-focus);
+            }
+        }
+        .ab-feedback-action-thumbs-down{
+            margin: 0.5em;
+            padding: 0.5em;
+            background: var(--lighter-red);
+
+            &:hover, &:focus {
+                /* background: var(--lighter-grey); */
+                cursor: pointer;
+                outline: 2px solid var(--blue-focus);
+            }
+
+        }
+    }
+
+    .ab-feedback-tell-me-more-button {
+        margin: 0.5em 0.15em;
+        background: var(--dark-grey);
+        color: var(--font-colour);
+        padding: 0.4em;
+        display: inline-flex;
+        cursor: pointer;
+        text-align:center;
+
+        &:hover, &:focus {
+            background: var(--lighter-grey);
+            cursor: pointer;
+            outline: 2px solid var(--dark-grey);
+        }
+
+    }
+
+    .ab-feedback-close-button{
+        margin: 0.15em;
+        background: var(--dark-red);
+        color: var(--font-colour);
+        padding: 0.4em;
+        padding-left: 2.3em;
+        display: inline-flex;
+        width: 8em;
+        text-align: center;
+
+        &:hover, &:focus {
+            background: var(--lighter-red);
+            cursor: pointer;
+            outline: 2px solid var(--blue-focus);
+        }
+    }
+
+}
+

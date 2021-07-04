@@ -1,0 +1,18 @@
+{
+  "extends": ["./node_modules/gts/", "plugin:cypress/recommended"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "node/no-unpublished-require": "off",
+    "node/no-unsupported-features/es-syntax": ["error", {
+      "version": ">=14.x",
+      "ignores": [
+        "modules"
+      ]
+    }]
+  }
+}

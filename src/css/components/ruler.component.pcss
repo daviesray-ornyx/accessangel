@@ -1,0 +1,42 @@
+#accessabar .ab-reading-ruler {
+    width: 100vw;
+    height: 6rem;
+    z-index: 2140000100;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+}
+
+#accessabar .ab-pinhole-ruler-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#accessabar .ab-pinhole-ruler-handle, #accessabar .ab-pinhole-ruler-centre {
+    pointer-events: none;
+    width: 100%;
+    z-index: 2140000100;
+}
+
+#accessabar .ab-pinhole-ruler-handle {
+    /* background: hsla(0, 0%, 0%, 0.85); */
+    position: absolute;
+    left: 0;
+
+    &.ab-top {
+        top: 0;
+    }
+
+    &.ab-bottom {
+        bottom: 0;
+    }
+}
+
+#accessabar .ab-pinhole-ruler-centre {
+    position: absolute;
+    left: 0;
+}

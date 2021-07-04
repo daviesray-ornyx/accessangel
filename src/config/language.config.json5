@@ -1,0 +1,375 @@
+{
+    Afrikaans: {
+        name: 'Afrikaans',
+        code: 'af',
+    },
+
+    Albanian: {
+        name: 'Albanian',
+        code: 'sq',
+    },
+
+    Amharic: {
+        name: 'Amharic',
+        code: 'am',
+    },
+
+    Arabic: {
+        name: 'Arabic',
+        code: 'ar',
+    },
+
+    Armenian: {
+        name: 'Armenian',
+        code: 'hy',
+    },
+
+    Azerbaijani: {
+        name: 'Azerbaijani',
+        code: 'az',
+    },
+
+    Basque: {
+        name: 'Basque',
+        code: 'eu',
+    },
+
+    Belarusian: {
+        name: 'Belarusian',
+        code: 'be',
+    },
+
+    georgia: {
+        name: 'Georgia',
+        code: 'ge',
+    },
+
+    Bengali: {
+        name: 'Bengali',
+        code: 'bn',
+    },
+
+    Bosnian: {
+        name: 'Bosnian',
+        code: 'bs',
+    },
+
+    Bulgarian: {
+        name: 'Bulgarian',
+        code: 'bg',
+    },
+
+    Catalan: {
+        name: 'Catalan',
+        code: 'ca',
+    },
+
+    Cebuano: {
+        name: 'Cebuano',
+        code: 'ceb',
+    },
+    Chinese: {
+        name: 'Chinese',
+        code: 'zh',
+    },
+    Chuvash: {
+        name: 'Chuvash',
+        code: 'cv',
+    },
+    Croatian: {
+        name: 'Croatian',
+        code: 'hr',
+    },
+    Czech: {
+        name: 'Czech',
+        code: 'cs',
+    },
+    Danish: {
+        name: 'Danish',
+        code: 'da',
+    },
+    Dutch: {
+        name: 'Dutch',
+        code: 'nl',
+    },
+    Elvish_Sindarin: {
+        name: 'Elvish (Sindarin) α',
+        code: 'sc',
+    },
+    English: {
+        name: 'English',
+        code: 'en',
+    },
+    Esperanto: {
+        name: 'Esperanto',
+        code: 'eo',
+    },
+    Estonian: {
+        name: 'Estonian',
+        code: 'et',
+    },
+    Finnish: {
+        name: 'Finnish',
+        code: 'fi',
+    },
+    French: {
+        name: 'French',
+        code: 'fr',
+    },
+    Galician: {
+        name: 'Galician',
+        code: 'gl',
+    },
+    Georgian: {
+        name: 'Georgian',
+        code: 'ka',
+    },
+    German: {
+        name: 'German',
+        code: 'de',
+    },
+    Greek: {
+        name: 'Greek',
+        code: 'el',
+    },
+    Gujarati: {
+        name: 'Gujarati',
+        code: 'gu',
+    },
+    Haitian_Creole: {
+        name: 'Haitian Creole',
+        code: 'ht',
+    },
+    Hebrew: {
+        name: 'Hebrew',
+        code: 'he',
+    },
+    Hindi: {
+        name: 'Hindi',
+        code: 'hi',
+    },
+    Hungarian: {
+        name: 'Hungarian',
+        code: 'hu',
+    },
+    Icelandic: {
+        name: 'Icelandic',
+        code: 'is',
+    },
+    Indonesian: {
+        name: 'Indonesian',
+        code: 'id',
+    },
+    Irish: {
+        name: 'Irish',
+        code: 'ga',
+    },
+    Italian: {
+        name: 'Italian',
+        code: 'it',
+    },
+    Japanese: {
+        name: 'Japanese β',
+        code: 'ja',
+    },
+    Javanese: {
+        name: 'Javanese',
+        code: 'jv',
+    },
+    Kannada: {
+        name: 'Kannada',
+        code: 'kn',
+    },
+    Kazakh: {
+        name: 'Kazakh',
+        code: 'kk',
+    },
+    Korean: {
+        name: 'Korean',
+        code: 'ko',
+    },
+    Khmer: {
+        name: 'Khmer',
+        code: 'km',
+    },
+    Lao: {
+        name: 'Lao β',
+        code: 'lo',
+    },
+    Latin: {
+        name: 'Latin',
+        code: 'la',
+    },
+    Latvian: {
+        name: 'Latvian',
+        code: 'lv',
+    },
+    Lithuanian: {
+        name: 'Lithuanian',
+        code: 'lt',
+    },
+    Luxembourgish: {
+        name: 'Luxembourgish',
+        code: 'lb',
+    },
+    Macedonian: {
+        name: 'Macedonian',
+        code: 'mk',
+    },
+    Malagasy: {
+        name: 'Malagasy',
+        code: 'mg',
+    },
+    Malay: {
+        name: 'Malay',
+        code: 'ms',
+    },
+    Malayalam: {
+        name: 'Malayalam',
+        code: 'ml',
+    },
+    Maltese: {
+        name: 'Maltese',
+        code: 'mt',
+    },
+    Maori: {
+        name: 'Maori',
+        code: 'mi',
+    },
+    Marathi: {
+        name: 'Marathi',
+        code: 'mr',
+    },
+    Mongolian: {
+        name: 'Mongolian β',
+        code: 'mn',
+    },
+    Nepali: {
+        name: 'Nepali',
+        code: 'ne',
+    },
+    Norwegian: {
+        name: 'Norwegian',
+        code: 'no',
+    },
+    Persian: {
+        name: 'Persian',
+        code: 'fa',
+    },
+    Polish: {
+        name: 'Polish',
+        code: 'pl',
+    },
+    Portuguese: {
+        name: 'Portuguese',
+        code: 'pt',
+    },
+    Punjabi: {
+        name: 'Punjabi',
+        code: 'pa',
+    },
+    Romanian: {
+        name: 'Romanian',
+        code: 'ro',
+    },
+    Russian: {
+        name: 'Russian',
+        code: 'ru',
+    },
+    Scottish_Gaelic: {
+        name: 'Scottish Gaelic',
+        code: 'gd',
+    },
+    Serbian: {
+        name: 'Serbian',
+        code: 'sr',
+    },
+    Sinhalese: {
+        name: 'Sinhalese',
+        code: 'si',
+    },
+    Slovak: {
+        name: 'Slovak',
+        code: 'sk',
+    },
+    Slovenian: {
+        name: 'Slovenian',
+        code: 'sl',
+    },
+    Spanish: {
+        name: 'Spanish',
+        code: 'es',
+    },
+    Sundanese: {
+        name: 'Sundanese',
+        code: 'su',
+    },
+    Swahili: {
+        name: 'Swahili',
+        code: 'sw',
+    },
+    Swedish: {
+        name: 'Swedish',
+        code: 'sv',
+    },
+    Tagalog: {
+        name: 'Tagalog',
+        code: 'tl',
+    },
+    Tajik: {
+        name: 'Tajik β',
+        code: 'tg',
+    },
+    Tamil: {
+        name: 'Tamil β',
+        code: 'ta',
+    },
+    Tatar: {
+        name: 'Tatar β',
+        code: 'tt',
+    },
+    Telugu: {
+        name: 'Telugu',
+        code: 'te',
+    },
+    Thai: {
+        name: 'Thai',
+        code: 'th',
+    },
+    Turkish: {
+        name: 'Turkish',
+        code: 'tr',
+    },
+    Udmurt: {
+        name: 'Udmurt β',
+        code: 'ur',
+    },
+    Ukrainian: {
+        name: 'Ukrainian',
+        code: 'uk',
+    },
+    Urdu: {
+        name: 'Urdu',
+        code: 'ur',
+    },
+    Uzbek: {
+        name: 'Uzbek β',
+        code: 'uz',
+    },
+    Vietnamese: {
+        name: 'Vietnamese',
+        code: 'vi',
+    },
+    Welsh: {
+        name: 'Welsh',
+        code: 'cy',
+    },
+    Xhosa: {
+        name: 'Xhosa β',
+        code: 'xh',
+    },
+    Yiddish: {
+        name: 'Yiddish',
+        code: 'yi',
+    },
+}

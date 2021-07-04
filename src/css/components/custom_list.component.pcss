@@ -1,0 +1,68 @@
+#accessabar .ab-custom-list {
+    position: relative;
+
+    .ab-custom-list-box {
+        padding: 0.5em;
+        border: 2px solid var(--lighter-grey);
+        border-bottom: 3px solid var(--lighter-grey);
+        background: white;
+        justify-content: space-between;
+
+        &:hover {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        &:focus {
+            border-color: var(--blue-focus);
+        }
+
+        &.ab-active {
+            border-color: var(--blue-focus);
+        }
+
+        &:after {
+            width: 1em;
+            height: 1em;
+            background: url('../images/icon-nav-down.svg') no-repeat center;
+            content: '';
+        }
+    }
+
+    .ab-custom-list-selection {
+        background: white;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        top: 100%;
+        right: 0;
+        left: 0;
+        height: 12em;
+        overflow-x: hidden;
+        border-left: 2px solid var(--lighter-grey);
+        border-bottom: 2px solid var(--lighter-grey);
+        z-index: 2140000020;
+
+        &::-webkit-scrollbar {
+            background: #dedede;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--dark-grey);
+        }
+
+        .ab-custom-list-selection-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5em;
+            background: white;
+            border-right: 2px solid var(--lighter-grey);
+            border-bottom: 2px solid var(--lighter-grey);
+
+            &:hover {
+                cursor: pointer;
+                background: var(--very-light-grey);
+            }
+        }
+    }
+}

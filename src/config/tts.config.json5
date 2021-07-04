@@ -1,0 +1,166 @@
+[
+    {
+        name: 'Arabic',
+        lang: 'ar-XA',
+    },
+    {
+        name: 'Bengali (India)',
+        lang: 'bn-IN',
+    },
+    {
+        name: 'Chinese (Hong Kong)',
+        lang: 'yue-HK',
+    },
+    {
+        name: 'Czech (Czech Republic)',
+        lang: 'cs-CZ',
+    },
+    {
+        name: 'Danish (Denmark)',
+        lang: 'da-DK',
+    },
+    {
+        name: 'Dutch (Netherlands)',
+        lang: 'nl-NL',
+    },
+    {
+        name: 'English (UK)',
+        lang: 'en-GB',
+    },
+    {
+        name: 'English (US)',
+        lang: 'en-US',
+    },
+    {
+        name: 'English (Australia)',
+        lang: 'en-AU',
+    },
+    {
+        name: 'English (India)',
+        lang: 'en-IN',
+    },
+    {
+        name: 'Filipino (Philippines)',
+        lang: 'fil-PH',
+    },
+    {
+        name: 'Finnish (Finland)',
+        lang: 'fi-FI',
+    },
+    {
+        name: 'French (France)',
+        lang: 'fr-FR',
+    },
+    {
+        name: 'French (Canada)',
+        lang: 'fr-CA',
+    },
+    {
+        name: 'German (Germany)',
+        lang: 'de-DE',
+    },
+    {
+        name: 'Greek (Greece)',
+        lang: 'el-GR',
+    },
+    {
+        name: 'Gujarati (India)',
+        lang: 'gu-IN',
+    },
+    {
+        name: 'Hindi (India)',
+        lang: 'hi-IN',
+    },
+    {
+        name: 'Hungarian (Hungary)',
+        lang: 'hu-HU',
+    },
+    {
+        name: 'Indonesian (Indonesia)',
+        lang: 'id-ID',
+    },
+    {
+        name: 'Italian (Italy)',
+        lang: 'it-IT',
+    },
+    {
+        name: 'Japanese (Japan)',
+        lang: 'ja-JP',
+    },
+    {
+        name: 'Kannada (India)',
+        lang: 'kn-IN',
+    },
+    {
+        name: 'Korean (South Korea)',
+        lang: 'ko-KR',
+    },
+    {
+        name: 'Malayalam (India)',
+        lang: 'ml-IN',
+    },
+    {
+        name: 'Mandarin Chinese (China)',
+        lang: 'cmn-CN',
+    },
+    {
+        name: 'Mandarin Chinese (Taiwan)',
+        lang: 'cmn-TW',
+    },
+    {
+        name: 'Norwegian (Norway)',
+        lang: 'nb-NO',
+    },
+    {
+        name: 'Polish (Poland)',
+        lang: 'pl-PL',
+    },
+    {
+        name: 'Portuguese (Portugal)',
+        lang: 'pt-PT',
+    },
+    {
+        name: 'Portuguese (Brazil)',
+        lang: 'pt-BR',
+    },
+    {
+        name: 'Russian (Russia)',
+        lang: 'ru-RU',
+    },
+    {
+        name: 'Slovak (Slovakia)',
+        lang: 'sk-SK',
+    },
+    {
+        name: 'Spanish (Spain)',
+        lang: 'es-ES',
+    },
+    {
+        name: 'Swedish (Sweden)',
+        lang: 'sv-SE',
+    },
+    {
+        name: 'Tamil (India)',
+        lang: 'ta-IN',
+    },
+    {
+        name: 'Telugu (India)',
+        lang: 'te-IN',
+    },
+    {
+        name: 'Thai (Thailand)',
+        lang: 'th-TH',
+    },
+    {
+        name: 'Turkish (Turkey)',
+        lang: 'tr-TR',
+    },
+    {
+        name: 'Ukrainian (Ukraine)',
+        lang: 'uk-UA',
+    },
+    {
+        name: 'Vietnamese (Vietnam)',
+        lang: 'vi-VN',
+    }
+]

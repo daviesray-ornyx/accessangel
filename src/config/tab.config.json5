@@ -1,0 +1,521 @@
+{
+    menuHelp: {
+        id: 'ab-menu-help',
+        type: 'menu header button',
+        function: '_menuHelp',
+    }, 
+    menuClose: {
+        id: 'ab-menu-close',
+        type: 'menu header button',
+        function: '_menuClose',
+    }, 
+
+    tts: {
+        id: 'ab-tts',
+        type: 'menu button',
+        menuName: 'tts',
+        title: 'Text to Speech',
+        function: '_ttsHoverEnable',
+        containerId: 'ab-menu-tts',
+    },
+    speakOnHover: {
+        id: 'ab-switch-speak-on-hover',
+        type: 'action button',
+        function: '_ttsHoverToggle',
+    },
+    speakHighlighted: {
+        id: 'ab-switch-speak-highlighted',
+        type: 'action button',
+        function: '_ttsHightlightToggle',
+    },
+    
+    incFontSize: {
+        id: 'ab-font-increase',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontIncSize',
+    },
+    decFontSize: {
+        id: 'ab-font-decrease',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontDecSize',
+    },
+
+    fontReset: {
+        id: 'ab-font-reset',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontSizingDisable',
+    },
+
+    textOptions: {
+        id: 'ab-text-options',
+        type: 'menu button',
+        menuName: 'textOptions',
+        title: 'Text Options',
+        function: '_textOptions',
+        containerId: 'ab-menu-textOptions',
+    },
+    textOptionsFontTab: {
+        id: 'ab-tab-button-font',
+        type: 'tab button',
+        function: '_menuTextOpsSwitchInner',
+        option: 'font',
+        containerId: 'ab-text-options-inner-menu-font',
+    }, 
+    toggleFonttype: {
+        id: 'ab-switch-font-family-foggle',
+        type: 'action button',
+        function: '_fontFamilyToggle',
+    },
+    toggleFontList: {
+        id: 'ab-custom-list-box-font',
+        type: 'listbox',
+        function: '_fontToggleList',
+    },
+
+    textOptionsFontColorTab: {
+        id: 'ab-tab-button-text-color',
+        type: 'tab button',
+        function: '_menuTextOpsSwitchInner',
+        option: 'text_colour',
+        containerId: 'ab-text-options-inner-menu-colour',
+    }, 
+    toggleFontColor: {
+        id: 'ab-switch-font-color-toggle',
+        type: 'action button',
+        function: '_fontColourToggle',
+    },
+
+    textOptionsLineSpacingTab: {
+        id: 'ab-tab-button-line-spacing',
+        type: 'tab button',
+        function: '_menuTextOpsSwitchInner',
+        option: 'line_spacing',
+        containerId: 'ab-text-options-inner-menu-line-spacing',
+    },
+    toggleFontLineSpacing: {
+        id: 'ab-switch-fontLineSpacingToggle',
+        type: 'action button',
+        function: '_fontLineSpacingToggle',
+    },
+    lineSpacingIncrease: {
+        id: 'ab-ls-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontLineSpacingIncrement',
+    },
+    lineSpacingDecrease: {
+        id: 'ab-ls-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontLineSpacingDecrement',
+    },
+
+
+    textOptionsLetterSpacingTab: {
+        id: 'ab-tab-button-letter-spacing',
+        type: 'tab button',
+        function: '_menuTextOpsSwitchInner',
+        option: 'letter_spacing',
+        containerId: 'ab-text-options-inner-menu-letter-spacing',
+    }, 
+    toggleFontLetterSpacing: {
+        id: 'ab-switch-fontLetterSpacingToggle',
+        type: 'action button',
+        function: '_fontLetterSpacingToggle',
+    },
+    letterSpacingIncrease: {
+        id: 'ab-ks-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontLetterSpacingIncrement',
+    },
+    letterSpacingDecrease: {
+        id: 'ab-ks-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_fontLetterSpacingDecrement',
+    },
+
+
+    magnifier: {
+        id: 'ab-magnifier',
+        type: 'menu button',
+        menuName: 'magnifier',
+        title: 'Magnifier',
+        function: '_magEnable',
+        containerId: 'ab-menu-magnifier',
+    },
+    magnifierToggle: {
+        id: 'ab-switch-mag-toggle',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magToggle',
+    },
+    magScaleDecrease: {
+        id: 'ab-mag-scale-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magScaleDecrease',
+    },
+    magScaleIncrease: {
+        id: 'ab-mag-scale-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magScaleIncrease',
+    },
+    magWidthDecrease: {
+        id: 'ab-mag-width-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magWidthDecrease',
+    },
+    magWidthIncrease: {
+        id: 'ab-mag-width-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magWidthIncrease',
+    },
+    magHeightDecrease: {
+        id: 'ab-mag-height-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magHeightDecrease',
+    },
+    magHeightIncrease: {
+        id: 'ab-mag-height-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_magHeightIncrease',
+    },
+
+    masking: {
+        id: 'ab-screen-mask',
+        type: 'menu button',
+        menuName: 'masking',
+        title: 'Screen Masking',
+        function: '_maskEnable',
+        containerId: 'ab-menu-masking',
+    },
+    maskToggle: {
+        id: 'ab-switch-maskToggle',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_maskToggle',
+    },
+    maskOpacityDecrease: {
+        id: 'ab-mask-opacity-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_maskDecreaseOpacity',
+    },
+    maskOpacityIncrease: {
+        id: 'ab-mask-opacity-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_maskIncreaseOpacity',
+    },
+    rulerOptions: {
+        id: 'ab-rulers',
+        type: 'menu button',
+        menuName: 'rulerOptions',
+        title: 'Ruler Options',
+        function: '_rulerReadingEnable',
+        containerId: 'ab-menu-rulerOptions',
+    },
+    readingTab: {
+        id: 'ab-tab-button-reading',
+        type: 'tab button',
+        function: '_menuRulerOpsSwitchInner',
+        option: 'reading',
+        containerId: 'ab-ruler-options-inner-menu-reading',
+    },
+    rulerReadingToggle: {
+        id: 'ab-switch-rulerReadingToggle',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerReadingToggle',
+    },
+    rulerReadingOpacityDec: {
+        id: 'ab-reading-ruler-opacity-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerReadingOpacityDec',
+    },
+    rulerReadingOpacityInc: {
+        id: 'ab-reading-ruler-opacity-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerReadingOpacityInc',
+    },
+    rulerSizeDecrease: {
+        id: 'ab-ruler-size-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerSizeDecrease',
+    },
+    rulerSizeIncrease: {
+        id: 'ab-ruler-size-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerSizeIncrease',
+    },
+
+    pinholeTab: {
+        id: 'ab-tab-button-pinhole',
+        type: 'tab button',
+        function: '_menuRulerOpsSwitchInner',
+        option: 'pinhole',
+        containerId: 'ab-ruler-options-inner-menu-pinhole',
+    },
+    rulerPinholeToggle: {
+        id: 'ab-switch-rulerPinholeToggle',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerPinholeToggle',
+    },
+    rulerPinholeOpacityDec: {
+        id: 'ab-pinhole-ruler-opacity-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerPinholeOpacityDec',
+    },
+    rulerPinholeOpacityInc: {
+        id: 'ab-pinhole-ruler-opacity-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerPinholeOpacityInc',
+    },
+    rulerPinholeSizeDec: {
+        id: 'ab-pinhole-ruler-size-dec',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerPinholeSizeDec',
+    },
+    rulerPinholeSizeInc: {
+        id: 'ab-pinhole-ruler-size-inc',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_rulerPinholeSizeInc',
+    },
+
+
+    speechRecognition: {
+        id: 'ab-speech-recognition',
+        type: 'menu button',
+        menuName: 'speechRecognition',
+        title: 'Speech Recognition',
+        function: '_srEnable',
+        containerId: 'ab-menu-speechRecognition',
+    },
+    srToggle: {
+        id: 'ab-switch-srToggle',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_srToggle',
+    },
+
+    pageTranslate: {
+        id: 'ab-page-translate',
+        type: 'menu button',
+        menuName: 'pageTranslate',
+        title: 'Page Translation',
+        function: '_menuOpen',
+        defaultFunc: '_ptEnable',
+        containerId: 'ab-menu-pageTranslate',
+    },
+    pageTranslateToggle: {
+        id: 'ab-switch-ptToggle',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_ptToggle',
+    },
+    languageToggleList: {
+        id: 'ab-custom-list-box-language',
+        type: 'listbox',
+        function: '_languageToggleList',
+    },
+
+    simplifyPage: {
+        id: 'ab-simplify-button',
+        type: 'settings menu button',
+        function: '_simplifyOpen',
+        containerId: 'ab-simplify',
+    },
+
+    aceSpeakTooltipsToggle: {
+        id: 'ab-switch-menu-speak-tooltip',
+        type: 'action button',
+        function: '_aceSpeakTooltipsToggle',
+    },
+    resetAll: {
+        id: 'ab-reset',
+        type: 'action button',
+        function: '_resetAll',
+    },
+    settings: {
+        id: 'ab-settings-button',
+        type: 'settings menu button',
+        function: '_settingsOpen',
+        containerId: 'ab-settings',
+    },
+    tooltipSpeak: {
+        id: 'ab-switch-settings-tooltip-speak',
+        type: 'action button',
+        menuName: '',
+        title: '',
+        function: '_aceSpeakTooltipsToggle',
+    },
+    settingsThemeDefault: {
+        id: 'ab-color-selector-default',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'default-theme'
+    },
+    settingsThemeLight: {
+        id: 'ab-color-selector-light',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'light-theme'
+    },
+    settingsThemeDark: {
+        id: 'ab-color-selector-dark',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'dark-theme'
+    },
+    settingsThemeOrange: {
+        id: 'ab-color-selector-orange',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'orange-theme'
+    },
+    settingsThemeSkyBlue: {
+        id: 'ab-color-selector-sky-blue',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'sky-blue-theme'
+    },
+    settingsThemePink: {
+        id: 'ab-color-selector-pink',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'pink-theme'
+    },
+    settingsThemeYellow: {
+        id: 'ab-color-selector-yellow',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'yellow-theme'
+    },
+    settingsThemeYellow: {
+        id: 'ab-color-selector-yellow',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'yellow-theme'
+    },
+    settingsThemeGrassGreen: {
+        id: 'ab-color-selector-grass-green',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'grass-green-theme'
+    },
+    settingsThemeAquaBlue: {
+        id: 'ab-color-selector-aqua-blue',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'aqua-blue-theme'
+    },
+    settingsThemeCeleryGreen: {
+        id: 'ab-color-selector-celery-green',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'celery-green-theme'
+    },
+    settingsThemeJade: {
+        id: 'ab-color-selector-jade',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'jade-theme'
+    },
+    settingsThemeMagenta: {
+        id: 'ab-color-selector-magenta',
+        type: 'color selector',
+        menuName: '',
+        title: '',
+        function: '_settingsChangeTheme',
+        option: 'magenta-theme'
+    },
+
+    about: {
+        id: 'ab-about-button',
+        type: 'about menu button',
+        menuName: 'about',
+        title: '',
+        function: '_aboutOpen',
+        containerId: 'ab-about',
+    },
+    closeAce: {
+        id: 'ab-close',
+        type: 'close menu button',
+        menuName: 'close',
+        title: 'Close',
+        function: '_closeAce',
+        containerId: 'ab-feedback-menu',
+    }
+}

@@ -1,0 +1,85 @@
+{
+    sylexiad_sans: {
+        id: 1,
+        name: 'Sylexiad Sans',
+        family: '"Sylexiad Sans", sans-serif',
+    },
+
+    sylexiad_serif: {
+        id: 2,
+        name: 'Sylexiad Serif',
+        family: '"Sylexiad Serif", sans-serif',
+    },
+
+    opendyslexic: {
+        id: 3,
+        name: 'OpenDyslexic 3',
+        family: '"OpenDyslexic 3", sans-serif',
+    },
+
+    arial: {
+        id: 4,
+        name: 'Arial',
+        family: '"Arial", sans-serif',
+    },
+
+    comic_sans: {
+        id: 5,
+        name: 'Comic Sans',
+        family: '"Comic Sans MS", sans-serif',
+    },
+
+    helvetica: {
+        id: 6,
+        name: 'Helvetica',
+        family: '"Helvetica", sans-serif',
+    },
+
+    calibri: {
+        id: 7,
+        name: 'Calibri',
+        family: '"Calibri", sans-serif',
+    },
+
+    times_new_roman: {
+        id: 8,
+        name: 'Times New Roman',
+        family: '"Times New Roman", Times, serif',
+    },
+
+    georgia: {
+        id: 9,
+        name: 'Georgia',
+        family: '"Georgia", serif',
+    },
+
+    verdana: {
+        id: 10,
+        name: 'Verdana',
+        family: '"Verdana", sans-serif',
+    },
+
+    tahoma: {
+        id: 11,
+        name: 'Tahoma',
+        family: '"Tahoma", sans-serif',
+    },
+
+    trebuchet: {
+        id: 12,
+        name: 'Trebuchet',
+        family: '"Trebuchet MS", sans-serif',
+    },
+
+    courier: {
+        id: 13,
+        name: 'Courier',
+        family: '"Courier New", "Courier", monospace',
+    },
+
+    bodoni_bt: {
+        id: 14,
+        name: 'Bodoni BT',
+        family: '"Bodoni BT", serif',
+    },
+}

@@ -1,0 +1,45 @@
+#accessabar {
+    color: var(--alt-font-colour);
+    font-family: var(--main-font);
+    z-index: 2140000000; /* bit ugly -- 2147483647 is max s32 int */
+}
+
+#accessabar .ab-bar {
+    grid-area: bar;
+    background: var(--ab-bar-background);
+    box-shadow: 0 2px 2px var(--shadow-grey);
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+
+    .ab-bar-container {
+        background: var(--ab-bar-container-background);
+        padding: 0.25em;
+        position: relative;
+    }
+}
+
+#accessabar .ab-underbar {
+    grid-area: underbar;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: "hide-button prompt filler";
+    width: 100%;
+
+    .ab-underbar-filler {
+        grid-area: filler;
+    }
+}
+
+#accessabar .ab-func-area {
+    grid-area: func-area;
+}
+
+#accessabar .ab-menu-area {
+    grid-area: menu-area;
+}
+
+#accessabar .ab-underbar,
+#accessabar .ab-func-area,
+#accessabar .ab-menu-area {
+    height: 0;
+}

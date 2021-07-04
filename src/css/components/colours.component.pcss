@@ -1,0 +1,115 @@
+#accessabar .ab-colour-presets {
+    .ab-colours {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "red blue green"
+            "yellow orange purple"
+            "black grey white";
+        grid-row-gap: 0.5rem;
+        grid-column-gap: 0.5rem;
+        height: 8.5em;
+        width: 8.5em;
+
+        .ab-colour {
+            height: 100%;
+            width: 100%;
+            outline: 2px solid var(--near-black);
+
+            &.ab-active, &:hover, &:focus {
+                outline: 2px solid var(--blue-focus);
+                box-shadow:
+                    0 0 0 1px var(--blue-focus) inset,
+                    0 0 0 2px white inset;
+                cursor: pointer;
+            }
+
+            &.ab-red {
+                grid-area: red;
+                background: red;
+            }
+
+            &.ab-blue {
+                grid-area: blue;
+                background: blue;
+            }
+
+            &.ab-green {
+                grid-area: green;
+                background: green;
+            }
+
+            &.ab-yellow {
+                grid-area: yellow;
+                background: yellow;
+            }
+
+            &.ab-orange {
+                grid-area: orange;
+                background: orange;
+            }
+
+            &.ab-purple {
+                grid-area: purple;
+                background: purple;
+            }
+
+            &.ab-black {
+                grid-area: black;
+                background: black;
+            }
+
+            &.ab-grey {
+                grid-area: grey;
+                background: grey;
+            }
+
+            &.ab-white {
+                grid-area: white;
+                background: white;
+            }
+        }
+    }
+}
+
+#accessabar .ab-colour-custom {
+    .ab-custom-container {
+        justify-content: center;
+        margin-top: 1em;
+        height: 8em;
+        width: 8em;
+
+        .ab-custom-box {
+            height: 50%;
+            width: 50%;
+            outline: 2px solid var(--near-black);
+
+            &.ab-active, &:hover, &:focus {
+                outline: 2px solid var(--blue-focus);
+                box-shadow:
+                    0 0 0 1px var(--blue-focus) inset,
+                    0 0 0 2px white inset;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#accessabar .ab-colour-custom, #accessabar .ab-colour-presets {
+    align-items: center;
+    padding: 0 1em;
+
+    > .ab-title {
+        text-align: center;
+        font-size: 1.25em;
+        font-weight: bold;
+        margin: 0.5em 0;
+    }
+
+    > .ab-desc {
+        text-align: center;
+        font-size: 1em;
+        color: var(--dark-grey);
+    }
+}

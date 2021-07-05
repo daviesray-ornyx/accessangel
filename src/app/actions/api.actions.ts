@@ -56,10 +56,13 @@ async function apiGetTranslation(data: Ace.TranslateData) {
     method: 'POST',
     mode: 'cors',
     redirect: 'follow',
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+      Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
+      'Content-Type': 'application/json',
+    },
   };
 
-  return handleRequest('https://trans.acetoolbar.com/api/v1/translate', req);
+  return handleRequest('https://trans.accessangel.app/api/v1/translate', req);
 }
 
 async function apiGetTTS(data: Ace.TTSData) {
@@ -68,10 +71,13 @@ async function apiGetTTS(data: Ace.TTSData) {
     method: 'POST',
     mode: 'cors',
     redirect: 'follow',
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+      Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
+      'Content-Type': 'application/json',
+    },
   };
 
-  return handleRequest('https://ace-tts.acetoolbar.com/api/v1/text', req);
+  return handleRequest('https://tts.accessangel.app/api/v1/text', req);
 }
 
 async function apiGetSimplify(data: Ace.SimplifyData) {
@@ -80,10 +86,13 @@ async function apiGetSimplify(data: Ace.SimplifyData) {
     method: 'POST',
     mode: 'cors',
     redirect: 'follow',
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+      Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
+      'Content-Type': 'application/json',
+    },
   };
 
-  return handleRequest('https://simplify.acetoolbar.com/api/v1/simplify', req);
+  return handleRequest('https://simp.accessangel.app/api/v1/simplify', req);
 }
 
 export {apiSendEvent, apiGetTranslation, apiGetTTS, apiGetSimplify};

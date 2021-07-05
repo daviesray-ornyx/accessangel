@@ -87,6 +87,9 @@ class AceController {
   private rendered = false;
   public loaded = false;
 
+  // IDToken for API's
+  public authToken: string;
+
   constructor({
     buttonFloatPosition = '',
     buttonFloatOffset = 0,
@@ -96,9 +99,18 @@ class AceController {
     fillWidth = false,
     fixedNavigation,
     moveBody,
-  }: Ace.AceConfig = {}) {
+    IDToken,
+  }: Ace.AceConfig) {
     // Allows easy access during runtime to separate parts of the code
     window.aceRuntimeProxy = this;
+
+    // -- IDToken --
+
+    if (!IDToken) {
+      throw Error('[AccessAngel] Error: no IDToken provided');
+    }
+
+    this.authToken = IDToken;
 
     // -- enableButton --
     if (enableButton) {

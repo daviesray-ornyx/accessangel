@@ -252,6 +252,8 @@ declare namespace Ace {
     fillWidth?: boolean;
     fixedNavigation?: string;
     moveBody?: boolean;
+    originID?: string;
+    IDToken: string;
   }
 
   interface ListItem {

@@ -51,45 +51,51 @@ async function apiSendEvent(eventType: string) {
 }
 
 async function apiGetTranslation(data: Ace.TranslateData) {
+  const headers = new Headers({
+    Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
+    'Content-Type': 'application/json',
+  });
   const req = {
     body: JSON.stringify(data),
     method: 'POST',
     mode: 'cors',
     redirect: 'follow',
-    headers: {
-      Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
-      'Content-Type': 'application/json',
-    },
+    credentials: 'include',
+    headers,
   };
 
   return handleRequest('https://trans.accessangel.app/api/v1/translate', req);
 }
 
 async function apiGetTTS(data: Ace.TTSData) {
+  const headers = new Headers({
+    Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
+    'Content-Type': 'application/json',
+  });
   const req = {
     body: JSON.stringify(data),
     method: 'POST',
     mode: 'cors',
     redirect: 'follow',
-    headers: {
-      Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
-      'Content-Type': 'application/json',
-    },
+    credentials: 'include',
+    headers,
   };
 
   return handleRequest('https://tts.accessangel.app/api/v1/text', req);
 }
 
 async function apiGetSimplify(data: Ace.SimplifyData) {
+  const headers = new Headers({
+    Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
+    'Content-Type': 'application/json',
+  });
   const req = {
     body: JSON.stringify(data),
     method: 'POST',
     mode: 'cors',
     redirect: 'follow',
-    headers: {
-      Authorization: `Bearer ${window.aceRuntimeProxy.authToken}`,
-      'Content-Type': 'application/json',
-    },
+    credentials: 'include',
+    headers,
   };
 
   return handleRequest('https://simp.accessangel.app/api/v1/simplify', req);

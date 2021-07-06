@@ -26,6 +26,7 @@ const buttonArea = (state: Ace.State) => {
     tablet: true,
     featureDetect: true,
   });
+  const {ttsAudioState} = state;
   return h(
     'ab-button-area',
     {
@@ -35,19 +36,18 @@ const buttonArea = (state: Ace.State) => {
     },
     [
       h('ab-button-section', {class: 'ab-flex'}, [
-        h(
-          'ab-button-group',
-          {
-            class: `ab-group ${
-              state.ttsHoverSpeak || state.ttsHighlightSpeak
-                ? 'ab-flex'
-                : 'ab-hide'
-            }`,
-            'aria-label': 'Sound controls',
-          },
-          [Buttons.stopButton()]
-        ),
+        h('ab-button-group', {
+          class: `ab-group ${
+            state.ttsHighlightSpeak &&
+            ['Paused', 'Playing'].indexOf(ttsAudioState) > -1
+              ? 'ab-flex'
+              : 'ab-hide'
+          }`,
+          'aria-label': 'Sound controls',
+        }),
         h('ab-button-group', {class: 'ab-group ab-flex ab-flex-wrap'}, [
+          [Buttons.pauseToggleButton(state)],
+          [Buttons.stopButton(state)],
           !mobile && Buttons.ttsButton(state),
           Buttons.incButton(),
           Buttons.decButton(),

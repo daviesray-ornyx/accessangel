@@ -6,6 +6,7 @@ import {
   fxLanguageChangeAll,
   fxPtCachePage,
   fxPtSwitchTTS,
+  fxResetLanguage,
 } from '../fx/language.fx';
 
 function ptEnable(state: Ace.State) {
@@ -132,7 +133,11 @@ function ptToggle(state: Ace.State) {
   };
 
   apiSendEvent(`AcePageTranslation_${newState.ptActive ? 'On' : 'Off'}`);
-  return [newState, fxPtCachePage(newState)];
+  return [
+    newState,
+    newState.ptActive && fxPtCachePage(newState),
+    !newState.ptActive && fxResetLanguage(newState),
+  ];
 }
 
 function ptResetLanguage(state: Ace.State) {

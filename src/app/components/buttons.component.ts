@@ -1,5 +1,9 @@
 import {h} from 'hyperapp';
-import {ttsHightlightEnable, ttsStopCurrent} from '../actions/tts.actions';
+import {
+  ttsHightlightEnable,
+  ttsStopCurrent,
+  ttsPausePlayToggleCurrent,
+} from '../actions/tts.actions';
 import {
   handleButtonNavigation,
   aceAddTippy,
@@ -24,21 +28,67 @@ import {ptEnable} from '../actions/language.actions';
 import {fxMenuFocus} from '../fx/menu.fx';
 import {simplifyOpen} from '../actions/simplify.actions';
 
-const stopButton = () => {
+const pauseToggleButton = (state: Ace.State) => {
+  return h(
+    'ab-bar-pause-toggle-button',
+    {
+      'aria-label': `${state.ttsAudioState === 'Playing' ? 'Pause' : 'Play'}`,
+      class: `ab-bar-button ${
+        state.ttsHighlightSpeak && state.ttsAudioState !== 'None'
+          ? 'ab-flex'
+          : 'ab-hide'
+      }`,
+      id: 'ab-pause-toggle',
+      onclick: ttsPausePlayToggleCurrent,
+      onmouseover: [
+        aceAddTippy,
+        {
+          id: '#ab-pause-toggle',
+          content: `${state.ttsAudioState === 'Playing' ? 'Pause' : 'Play'}`,
+        },
+      ],
+      onmouseenter: [
+        aceSpeakTooltip,
+        {
+          id: '#ab-pause-toggle',
+          content: `${state.ttsAudioState === 'Playing' ? 'Pause' : 'Play'}`,
+        },
+      ],
+      onkeydown: handleButtonNavigation,
+      role: 'button',
+      tabIndex: 0,
+    },
+    [
+      h('ab-icon', {
+        'aria-hidden': 'true',
+        class: `ab-icon ${
+          state.ttsAudioState === 'Playing' ? 'ab-icon-pause' : 'ab-icon-play'
+        }`,
+        id: 'ab-icon-pause-toggle',
+      }),
+    ]
+  );
+};
+
+const stopButton = (state: Ace.State) => {
   return h(
     'ab-bar-stop-button',
     {
       'aria-label': 'Stop',
-      class: 'ab-bar-button',
+      class: `ab-bar-button ${
+        state.ttsHighlightSpeak && state.ttsAudioState !== 'None'
+          ? 'ab-flex'
+          : 'ab-hide'
+      }`,
       id: 'ab-stop',
       onclick: ttsStopCurrent,
       onmouseover: [
         aceAddTippy,
-        {id: '#ab-stop', content: 'Stop Current Text to Speech'},
+        {id: '#ab-stop', content: 'Stop Text to Speech'},
       ],
       onmouseenter: [
         aceSpeakTooltip,
-        {id: '#ab-stop', content: 'Stop Current Text to Speech'},
+        {id: '#ab-stop', content: 'Stop Text to Speech'},
       ],
       onkeydown: handleButtonNavigation,
       role: 'button',
@@ -48,12 +98,13 @@ const stopButton = () => {
       h('ab-icon', {
         'aria-hidden': 'true',
         class: 'ab-icon ab-icon-stop',
+        id: 'ab-icon-stop',
       }),
     ]
   );
 };
 
-const ttsButton = ({menus}: Ace.State) => {
+const ttsButton = ({menus, ttsHighlightSpeak, ttsAudioState}: Ace.State) => {
   return h(
     'ab-bar-tts-button',
     {
@@ -63,7 +114,9 @@ const ttsButton = ({menus}: Ace.State) => {
       'aria-label': 'Enable text to speech',
       'aria-pressed':
         Object.keys(menus).indexOf('tts') !== -1 ? 'true' : 'false',
-      class: 'ab-bar-button',
+      class: `ab-bar-button ${
+        !ttsHighlightSpeak || ttsAudioState === 'None' ? 'ab-flex' : 'ab-hide'
+      }`,
       id: 'ab-tts',
       onclick: [
         menuOpen,
@@ -555,8 +608,14 @@ const closeButton = () => {
       class: 'ab-bar-button ab-close',
       id: 'ab-close',
       onclick: closeAce,
-      onmouseover: [aceAddTippy, {id: '#ab-close', content: 'Close AccessAngel'}],
-      onmouseenter: [aceSpeakTooltip, {id: '#ab-close', content: 'Close AccessAngel'}],
+      onmouseover: [
+        aceAddTippy,
+        {id: '#ab-close', content: 'Close AccessAngel'},
+      ],
+      onmouseenter: [
+        aceSpeakTooltip,
+        {id: '#ab-close', content: 'Close AccessAngel'},
+      ],
       onkeydown: handleButtonNavigation,
       role: 'button',
       tabIndex: -0,
@@ -636,4 +695,5 @@ export {
   aboutButton,
   hideButton,
   stopButton,
+  pauseToggleButton,
 };

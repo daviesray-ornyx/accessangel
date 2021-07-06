@@ -182,6 +182,7 @@ declare namespace Ace {
     ttsGender: string;
     ttsVoiceActive: boolean;
     ttsAudio: HTMLAudioElement;
+    ttsAudioState: 'None' | 'Playing' | 'Paused';
   }
 
   interface StateTabbing {

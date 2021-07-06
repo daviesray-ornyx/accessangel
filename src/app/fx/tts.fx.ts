@@ -2,6 +2,7 @@ import {
   ttsHandleHighlight,
   ttsHandleHover,
   ttsSpeak,
+  ttsPrepAudio,
   ttsPlayAudio,
   ttsStopCurrent,
 } from '../actions/tts.actions';
@@ -93,6 +94,7 @@ function fxTTSHighlight(state: Ace.State) {
       ];
 }
 
+
 function fxTTSHighlightEventStop(state: Ace.State) {
   return (
     state.ttsHighlightSpeak && [
@@ -104,6 +106,7 @@ function fxTTSHighlightEventStop(state: Ace.State) {
     ]
   );
 }
+
 
 let timeoutHandle: number;
 
@@ -131,7 +134,7 @@ function fxTTSDelaySpeech(state: Ace.State, currentText: string) {
   ];
 }
 
-function fxTTSPlayAudio(data: Ace.TTSData) {
+function fxTTSPrepAudio(data: Ace.TTSData) {
   return [
     (dispatch, props) => {
       apiGetTTS(data).then(audioData => {
@@ -143,7 +146,58 @@ function fxTTSPlayAudio(data: Ace.TTSData) {
       });
     },
     {
+      action: ttsPrepAudio,
+    },
+  ];
+}
+
+const playAudioHandle: unknown[] = [];
+const playAudioPassthrough = (dispatch, props) => {
+  playAudioHandle.length < 1 &&
+  playAudioHandle.push(event => dispatch(props.action, event));
+
+  return playAudioHandle[0];
+};
+
+
+function fxTTSPlayAudio(state: Ace.State){
+  const {ttsAudio} = state;
+  return [
+    (dispatch, props) => {
+      ttsAudio.addEventListener('canplaythrough', playAudioPassthrough(dispatch,props));
+      
+      return () => {
+        ttsAudio.removeEventListener('canplaythrough', playAudioPassthrough(dispatch,props));
+      };
+    },
+    {
+      state,
       action: ttsPlayAudio,
+    },
+  ];
+}
+
+const stopAudioHandle: unknown[] = [];
+const stopAudioPassthrough = (dispatch, props) => {
+  stopAudioHandle.length < 1 &&
+  stopAudioHandle.push(event => dispatch(props.action, event));
+
+  return stopAudioHandle[0];
+};
+
+function fxTTSStopAudio(state: Ace.State){
+  const {ttsAudio} = state;
+  return [
+    (dispatch, props) => {
+      ttsAudio.addEventListener('ended', stopAudioPassthrough(dispatch,props));
+      
+      return () => {
+        ttsAudio.removeEventListener('ended', stopAudioPassthrough(dispatch,props));
+      };
+    },
+    {
+      state,
+      action: ttsStopCurrent,
     },
   ];
 }
@@ -154,5 +208,7 @@ export {
   fxTTSDelaySpeech,
   fxTTSHighlightEventStop,
   fxTTSHoverEventStop,
+  fxTTSPrepAudio,
   fxTTSPlayAudio,
+  fxTTSStopAudio,
 };

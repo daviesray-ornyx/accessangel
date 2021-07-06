@@ -190,6 +190,7 @@ const stateTTS: Ace.StateTTS = {
   ttsGenderListActive: false,
   ttsVoices: voices,
   ttsAudio: new Audio(),
+  ttsAudioState: 'None',
   ttsGenders: ['Neutral', 'Female', 'Male'],
   ttsGender: 'Neutral',
 };

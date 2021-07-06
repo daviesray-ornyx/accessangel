@@ -135,9 +135,9 @@ function ttsPrepAudio(state: Ace.State, id: string) {
 function ttsPlayAudio(state: Ace.State, id: string) {
   const {ttsAudio} = state;
 
-  ttsAudio.play()
+  ttsAudio.play();
 
-  const newState: Ace.State =  {
+  const newState: Ace.State = {
     ...state,
     ttsAudio,
     ttsAudioState: 'Playing',
@@ -181,7 +181,11 @@ function ttsPausePlayToggleCurrent(state: Ace.State) {
 function ttsStopCurrent(state: Ace.State) {
   const {ttsAudio, ttsAudioState} = state;
 
-  if (ttsAudio && typeof ttsAudio.pause === 'function' && ttsAudioState !== 'None') {
+  if (
+    ttsAudio &&
+    typeof ttsAudio.pause === 'function' &&
+    ttsAudioState !== 'None'
+  ) {
     ttsAudio.pause();
     document.getSelection()?.empty();
   }

@@ -91,9 +91,7 @@ function ttsHightlightEnable(state: Ace.State) {
 }
 
 function ttsPlayAudio(state: Ace.State, id: string) {
-  const ttsAudio = new Audio(
-    `https://ace-tts.acetoolbar.com/api/v1/text/${id}`
-  );
+  const ttsAudio = new Audio(`https://tts.accessangel.app/api/v1/text/${id}`);
 
   ttsAudio.addEventListener('canplaythrough', () => ttsAudio.play());
 

@@ -387,6 +387,10 @@ function aceCreatePickr(
 }
 
 function aceAddTippy(state: Ace.State, opts: {id: string; content: string}) {
+  if (!(state.aceTooltips instanceof Map)) {
+    state.aceTooltips = new Map<string, string>();
+  }
+
   const tooltipContent = state.aceTooltips.get(opts.id);
   if (tooltipContent && tooltipContent === opts.content) {
     return state;

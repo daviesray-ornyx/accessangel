@@ -116,7 +116,7 @@ const config = env => {
         emitFile: true,
         name: 'fonts/[name].[ext]',
         publicPath:
-          'https://cdn.jsdelivr.net/npm/@handsfree/accessangel@latest/public/dist/accessangel/fonts/',
+          'https://cdn.jsdelivr.net/npm/@handsfree/accessangel@latest/public/dist/accessangel/',
       },
     };
 
@@ -126,7 +126,7 @@ const config = env => {
         emitFile: true,
         name: 'images/[name].[ext]',
         publicPath:
-          'https://cdn.jsdelivr.net/npm/@handsfree/accessangel@latest/public/dist/accessangel/images/',
+          'https://cdn.jsdelivr.net/npm/@handsfree/accessangel@latest/public/dist/accessangel/',
       },
     };
   }

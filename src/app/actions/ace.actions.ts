@@ -116,7 +116,11 @@ function acePruneFuncs(
 
 function aceHide(state: Ace.State) {
   const {aceHidden} = state;
-  const {mainElement, moveBody} = window.aceRuntimeProxy;
+  const {
+    mainElement,
+    moveBody,
+    fixedNavigationSelector,
+  } = window.aceRuntimeProxy;
 
   if (!mainElement) {
     return state;
@@ -140,13 +144,30 @@ function aceHide(state: Ace.State) {
 
   // Get height of Ace, then push Ace above the window view
   // by that height - 2px (allows a small amount of Ace to still show).
-  const rect = bar.getBoundingClientRect();
+  const aceRect = bar.getBoundingClientRect();
+  mainElement.style.top = `-${aceRect.height - 2}px`;
 
-  mainElement.style.top = `-${rect.height - 2}px`;
+  // Pushing up fixed nav
+  if (fixedNavigationSelector) {
+    const fixedNavEl = document.querySelector(fixedNavigationSelector);
+
+    if (!fixedNavEl) {
+      return;
+    }
+
+    const navRect = fixedNavEl.getBoundingClientRect();
+
+    if (navRect.y <= aceRect.y + aceRect.height) {
+      return;
+    }
+
+    (fixedNavEl as HTMLElement).style.top = `-${aceRect.height - 25}px`;
+  }
 
   if (moveBody) {
     document.body.style.marginTop = '2px';
   }
+
   return {...state, aceHidden: true, menusHidden: true};
 }
 
@@ -366,6 +387,10 @@ function aceCreatePickr(
 }
 
 function aceAddTippy(state: Ace.State, opts: {id: string; content: string}) {
+  if (!(state.aceTooltips instanceof Map)) {
+    state.aceTooltips = new Map<string, string>();
+  }
+
   const tooltipContent = state.aceTooltips.get(opts.id);
   if (tooltipContent && tooltipContent === opts.content) {
     return state;

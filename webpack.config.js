@@ -113,20 +113,20 @@ const config = env => {
     fontFileLoader = {
       loader: 'file-loader',
       options: {
-        emitFile: false,
-        name: '[name].[ext]',
+        emitFile: true,
+        name: 'fonts/[name].[ext]',
         publicPath:
-          'https://cdn.jsdelivr.net/gh/HandsFree/accessangel/src/fonts/',
+          'https://cdn.jsdelivr.net/npm/@handsfree/accessangel@latest/public/dist/accessangel/fonts/',
       },
     };
 
     imageFileLoader = {
       loader: 'file-loader',
       options: {
-        emitFile: false,
-        name: '[name].[ext]',
+        emitFile: true,
+        name: 'images/[name].[ext]',
         publicPath:
-          'https://cdn.jsdelivr.net/gh/HandsFree/accessangel/src/images/',
+          'https://cdn.jsdelivr.net/npm/@handsfree/accessangel@latest/public/dist/accessangel/images/',
       },
     };
   }

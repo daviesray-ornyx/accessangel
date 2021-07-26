@@ -8,11 +8,14 @@ import {fxMenuOpen} from '../fx/shortcuts.fx';
 import {menuFixOutOfBounds} from './menu.actions';
 
 function aceMoveBody() {
-  const {mainElement} = window.aceRuntimeProxy;
+  const {mainElement, fixedNavigationSelector} = window.aceRuntimeProxy;
 
   if (mainElement) {
     const rect = mainElement.getBoundingClientRect();
-    document.body.style.marginTop = `${rect.height}px`;
+    const fixedNavEl = document.querySelector(fixedNavigationSelector);
+    document.body.style.marginTop = `${
+      rect.height + (fixedNavEl ? fixedNavEl.getBoundingClientRect().height : 0)
+    }px`;
   }
 }
 
@@ -44,11 +47,11 @@ function acePushFixedNav() {
   const aceRect = mainElement.getBoundingClientRect();
   const navRect = fixedNavEl.getBoundingClientRect();
 
-  if (navRect.y >= aceRect.y + aceRect.height) {
+  if (navRect.y >= aceRect.y + aceRect.height - 25) {
     return;
   }
 
-  (fixedNavEl as HTMLElement).style.top = `${aceRect.height + 25}px`;
+  (fixedNavEl as HTMLElement).style.top = `${aceRect.height}px`;
 }
 
 function aceResetFixedNav() {
@@ -133,6 +136,10 @@ function aceHide(state: Ace.State) {
       aceMoveBody();
     }
 
+    if (fixedNavigationSelector) {
+      acePushFixedNav();
+    }
+
     return {...state, aceHidden: false, menusHidden: false};
   }
 
@@ -149,23 +156,15 @@ function aceHide(state: Ace.State) {
 
   // Pushing up fixed nav
   if (fixedNavigationSelector) {
-    const fixedNavEl = document.querySelector(fixedNavigationSelector);
-
-    if (!fixedNavEl) {
-      return;
-    }
-
-    const navRect = fixedNavEl.getBoundingClientRect();
-
-    if (navRect.y <= aceRect.y + aceRect.height) {
-      return;
-    }
-
-    (fixedNavEl as HTMLElement).style.top = `-${aceRect.height - 25}px`;
+    aceResetFixedNav();
   }
 
+  const fixedNavEl = document.querySelector(fixedNavigationSelector);
+
   if (moveBody) {
-    document.body.style.marginTop = '2px';
+    document.body.style.marginTop = `${
+      2 + (fixedNavEl ? fixedNavEl?.getBoundingClientRect().height : 0)
+    }px`;
   }
 
   return {...state, aceHidden: true, menusHidden: true};
